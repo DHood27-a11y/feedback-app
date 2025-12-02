@@ -25,29 +25,26 @@ https://localhost:3000/get-all-suggestions
 
 **Example Response:**
 
-```json
 Write the data returned by this endpoint.
 Think about its data type (String, Object, Array of Objects, etc.)
 Use spaces/indents to format the data if it is an array or object.
+**This would be an array of objects**
 
+```json
 [
-    {
-        "id": 1,
-        "title": "Add tags for solutions",
-        "description": "Easier to search for solutions based on a specific stack",
-        "category": "Enhancement"
-    },
-    {
-        "id": 2,
-        "title": "Allow image/video upload to feedback",
-        "description": "Stay updated on comments and solutions other people post",
-        "category": "Feature"
-
-    },
-
+  {
+    "id": 1,
+    "title": "Add tags for solutions",
+    "description": "Easier to search for solutions based on a specific stack",
+    "category": "Enhancement"
+  },
+  {
+    "id": 2,
+    "title": "Allow image/video upload to feedback",
+    "description": "Stay updated on comments and solutions other people post",
+    "category": "Feature"
+  }
 ]
-
-
 ```
 
 ---
@@ -64,25 +61,25 @@ http://localhost:3000/get-all-suggestions-by-category/Feature
 ```
 
 **Example Response:**
-
-```json
 Write the data returned by this endpoint.
 Think about its data type (String, Object, Array of Objects, etc.)
 Use spaces/indents to format the data if it is an array or object.
+**This would be an array of objects**
+
+```json
 [
-    {
-"id": 2,
-"title": "Add a dark theme option",
-"description": "It would help people with light sensitivities and who prefer dark mode",
-},
-{
+  {
+    "id": 2,
+    "title": "Add a dark theme option",
+    "description": "It would help people with light sensitivities and who prefer dark mode"
+  },
+  {
     "id": 3,
     "title": "Q&A within the challenge hubs",
     "description": "Challenge-specific Q&A would make for easy reference",
     "category": "Feature"
-}
+  }
 ]
-
 ```
 
 ---
@@ -100,30 +97,32 @@ http://localhost:3000/add-one-suggestion
 
 **Example Request Body:**
 
-```json
 Write the data required in the request body.
 Think about its data type (String, Object, Array of Objects, etc.)
 Use spaces/indents to format the data if it is an array or object.
+**This would be an object**
 
+```json
 {
-    "title": "Add keyboard shortcuts",
-    "description": "Useful for users who prefer fast navigation",
-    "category": "Feature"
+  "title": "Add keyboard shortcuts",
+  "description": "Useful for users who prefer fast navigation",
+  "category": "Feature"
 }
 ```
 
 **Example Response:**
 
-```json
 Write the data returned by this endpoint.
 Think about its data type (String, Object, Array of Objects, etc.)
 Use spaces/indents to format the data if it is an array or object.
+**This would be an object**
 
+```json
 {
-    "id": 7,
-    "title": "Add keyboard shortcuts",
-    "description": "Useful for users who prefer fast navigation",
-    "category": "Feature"
+  "id": 7,
+  "title": "Add keyboard shortcuts",
+  "description": "Useful for users who prefer fast navigation",
+  "category": "Feature"
 }
 ```
 
