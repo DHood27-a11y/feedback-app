@@ -14,20 +14,16 @@ Base URL: `https://REPLACE-THIS-WITH-YOUR-DEPLOYED-URL.onrender.com`
 
 ### 🔹 GET `/get-all-suggestions`
 
-**Description:** \_Returns an array of all suggestions stored in the database**\*\*\*\***\_\_**\*\*\*\***
+**Description:** Returns an array of all suggestions stored in the database.
 
 **Example Request URL:**
 
 ```
-Write the example request URL here:
 https://localhost:3000/get-all-suggestions
 ```
 
 **Example Response:**
 
-Write the data returned by this endpoint.
-Think about its data type (String, Object, Array of Objects, etc.)
-Use spaces/indents to format the data if it is an array or object.
 **This would be an array of objects**
 
 ```json
@@ -51,19 +47,16 @@ Use spaces/indents to format the data if it is an array or object.
 
 ### 🔹 GET `/get-suggestions-by-category/:category`
 
-**Description:** \_Returns all suggestions that match a specific category**\*\*\*\***\_\_**\*\*\*\***
+**Description:** Returns all suggestions that match a specific category.
 
 **Example Request URL:**
 
 ```
-Write the example request URL here
 http://localhost:3000/get-all-suggestions-by-category/Feature
 ```
 
 **Example Response:**
-Write the data returned by this endpoint.
-Think about its data type (String, Object, Array of Objects, etc.)
-Use spaces/indents to format the data if it is an array or object.
+
 **This would be an array of objects**
 
 ```json
@@ -86,20 +79,16 @@ Use spaces/indents to format the data if it is an array or object.
 
 ### 🔹 POST `/add-one-suggestion`
 
-**Description:** \_Adds a new suggestion to the database and returns created suggestion.**\*\*\*\***\_\_**\*\*\*\***
+**Description:** Adds a new suggestion to the database and returns created suggestion.
 
 **Example Request URL:**
 
 ```
-Write the example request URL here
 http://localhost:3000/add-one-suggestion
 ```
 
 **Example Request Body:**
 
-Write the data required in the request body.
-Think about its data type (String, Object, Array of Objects, etc.)
-Use spaces/indents to format the data if it is an array or object.
 **This would be an object**
 
 ```json
@@ -112,9 +101,6 @@ Use spaces/indents to format the data if it is an array or object.
 
 **Example Response:**
 
-Write the data returned by this endpoint.
-Think about its data type (String, Object, Array of Objects, etc.)
-Use spaces/indents to format the data if it is an array or object.
 **This would be an object**
 
 ```json
