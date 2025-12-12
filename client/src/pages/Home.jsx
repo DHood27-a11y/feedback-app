@@ -47,8 +47,12 @@ function Home() {
       <div className="home-page-container">
         {/*Sidebar*/}
         <div className="sidebar">
-          <h2>My Company </h2>
-          <p>Feedback Board</p>
+          {/*Wrapping My Company and Feedback Board in one box*/}
+          <div className="company-feedback-box">
+            <h2>My Company </h2>
+            <p>Feedback Board</p>
+          </div>
+
           <div className="category-buttons">
             {categories.map((category) => (
               <button
