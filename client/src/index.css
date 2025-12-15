@@ -1,4 +1,5 @@
 /* Global styles (this affects the whole application) */
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -11,28 +12,39 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+body {
+  font-family: Jost;
+}
+
 .home-page-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 60px;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  grid-template-rows: auto 1fr;
+  column-gap: 60px;
+  row-gap: 24px;
   padding: 40px;
   background-color: #f7f8fd;
-  min-height: 100%;
+  align-items: start;
 }
 
 .sidebar {
+  grid-column: 1;
+  grid-row: 1 / span 2;
   width: 260px;
   padding: 2rem 1rem;
-  margin-left: 60px;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
 .content-area {
+  grid-column: 2;
+  grid-row: 2;
+  padding-right: 80px;
   display: flex;
   flex-direction: column;
-  padding-right: 80px;
+  max-width: 825px;
+  width: 100%;
 }
 
 .company-feedback-box {
@@ -74,7 +86,8 @@
   background: white;
   border-radius: 12px;
   padding: 20px;
-  margin-top: 20px;
+
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -114,10 +127,10 @@
   align-items: center;
 
   background-color: #3a4374;
-  padding: 20px 24px;
-  border-radius: 12px;
+  padding: 18px 24px;
+  border-radius: 10px;
   color: white;
-  margin-top: 60px;
+  margin-top: 0;
   margin-bottom: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
@@ -194,4 +207,235 @@
   font-size: 12px;
   font-weight: 800;
   margin-top: 12px;
+}
+
+.empty-feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 16px;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.empty-feedback button {
+  background: #ad1fea;
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.add-feedback-page {
+  background-color: #f7f8fd;
+
+  padding: 48px 16px;
+}
+
+.add-feedback-container {
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.form-card {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 48px 32px 32px;
+
+  box-shadow: 0 10px 40px rgba(55, 63, 104, 0.08);
+}
+
+.form-group {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3a4374;
+  margin-bottom: 12px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  background-color: #f7f8fd;
+
+  border: none;
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 15px;
+  color: #3a4374;
+}
+
+.form-group textarea {
+  min-height: 120px;
+}
+
+.group-form-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.group-form-btns button {
+  padding: 16px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  border-radius: 10px;
+  border: nones;
+}
+
+.back-btn {
+  color: #797fa3;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 15px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.back-button-styling {
+  max-width: 540px;
+  margin: 0 auto 32px;
+  margin-bottom: 40px;
+}
+
+.submit-btn {
+  background-color: #ad1fea;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.cancel-btn {
+  background-color: #3a4374;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 16px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.add-feedback-icon {
+  position: absolute;
+  top: -42px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  padding-top: 20px;
+
+  background: linear-gradient(left to right, #ad1fea, #c75af6, #f49f85);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-card h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3a4374;
+  margin-bottom: 32px;
+}
+
+.form-card p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #647196;
+}
+
+/*Mobile*/
+
+@media (max-width: 768px) {
+  .home-page-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 0;
+    background-color: #f7f8fd;
+  }
+
+  .sidebar {
+    display: contents;
+  }
+
+  .company-feedback-box {
+    order: 1;
+    width: 100%;
+    padding: 24px 20px 20px;
+    border-radius: 0;
+  }
+
+  .top-header {
+    order: 2;
+    width: 100%;
+    background-color: #373f68;
+    margin: 0;
+    padding: 14px 16px;
+    border-radius: 0;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+  }
+
+  .top-header img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+
+  .top-header h3 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .add-btn {
+    margin-left: auto;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  .category-buttons {
+    order: 3;
+    margin: 24px 16px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .content-area {
+    order: 4;
+    padding: 24px 16px 32px;
+  }
 }

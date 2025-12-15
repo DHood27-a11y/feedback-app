@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import newFeedbackIcon from "../assets/icons/icon-new-feedback.svg";
 
 function AddFeedback() {
   const navigate = useNavigate();
@@ -50,46 +51,74 @@ function AddFeedback() {
   return (
     <>
       <div className="add-feedback-page">
-        {/*Back Button*/}
-        <button className="back-btn" onClick={() => navigate("/")}>
-          <span className="arrow">←</span>
-          Go Back
-        </button>
+        <div className="add-feedback-container">
+          {/*Back Button*/}
+          <div className="back-button-styling">
+            <button className="back-btn" onClick={() => navigate("/")}>
+              <span className="arrow">←</span>
+              Go Back
+            </button>
+          </div>
 
-        <div className="form-card">
-          <h1> Create New Feedback</h1>
-          <form onSubmit={handleSubmit}>
-            <label> Feedback Title</label>
-            <input
-              type="text"
-              placeholder="Add a short, descriptive headline"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              required
-            />
+          <div className="form-card">
+            <div className="add-feedback-icon">
+              <img src={newFeedbackIcon} alt="New feedback" />
+            </div>
+            <h1> Create New Feedback</h1>
+            <form onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label> Feedback Title</label>
+                <p>Add a short, descriptive headline</p>
+                <input
+                  type="text"
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                  required
+                />
+              </div>
 
-            <label>Category</label>
-            <select
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-            >
-              <option>UI</option>
-              <option>UX</option>
-              <option>Bug</option>
-              <option>Feature</option>
-              <option>Enhancement</option>
-            </select>
+              <div className="form-group">
+                <label>Category</label>
+                <p>Choose a category for your feedback</p>
+                <select
+                  value={category}
+                  onChange={(e) => setCategory(e.target.value)}
+                >
+                  <option>UI</option>
+                  <option>UX</option>
+                  <option>Bug</option>
+                  <option>Feature</option>
+                  <option>Enhancement</option>
+                </select>
+              </div>
 
-            <label> Feedback Detail</label>
-            <textarea
-              placeholder="Include any specific comments on what should be improved, added, etc."
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              required
-            />
+              <div className="form-group">
+                <label> Feedback Detail</label>
+                <p>
+                  Include any specific comments on what should be improved,
+                  added, etc.
+                </p>
+                <textarea
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  required
+                />
+              </div>
 
-            <button type="submit">Add Feedback</button>
-          </form>
+              <div className="group-form-btns">
+                <button
+                  type="button"
+                  className="cancel-btn"
+                  onClick={() => navigate("/")}
+                >
+                  Cancel
+                </button>
+                <button type="submit" className="submit-btn">
+                  Add Feedback
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </>

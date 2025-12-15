@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Suggestions from "../components/Suggestions";
 import EmptyFeedback from "../components/EmptyFeedback";
+import IconSuggestion from "../assets/suggestions/icon-suggestions.svg";
 
 function Home() {
   //created variable for each category so they can be filtered properly
@@ -67,23 +68,22 @@ function Home() {
         </div>
 
         {/*Main Content */}
-        <div className="content-area">
-          <div className="top-header">
-            <h3>{suggestions.length} Suggestions</h3>
-            <button
-              className="add-btn"
-              onClick={() => navigate("/AddFeedback")}
-            >
-              + Add Feedback
-            </button>
-          </div>
+        <div className="top-header">
+          <img src={IconSuggestion} alt="suggestions bulb" />
+          <h3>{suggestions.length} Suggestions</h3>
+          <button className="add-btn" onClick={() => navigate("/AddFeedback")}>
+            + Add Feedback
+          </button>
+        </div>
 
+        <div className="content-area">
           {/*Loading */}
           {isLoading && <p>Loading...</p>}
 
           {/*Empty State */}
-          {!isLoading && suggestions.length === 0 && <EmptyFeedback />}
-
+          <div className="empty-feedback">
+            {!isLoading && suggestions.length === 0 && <EmptyFeedback />}
+          </div>
           {/* Suggestions List */}
           {!isLoading && suggestions.length > 0 && (
             <Suggestions suggestions={suggestions} />

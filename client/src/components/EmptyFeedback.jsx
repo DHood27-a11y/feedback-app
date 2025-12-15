@@ -20,7 +20,7 @@ function EmptyFeedback() {
 
         <button
           className="add-feedback-btn"
-          onClick={() => navigate("/add-feedback")}
+          onClick={() => navigate("/AddFeedback")}
         >
           + Add Feedback
         </button>
