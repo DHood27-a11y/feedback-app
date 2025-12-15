@@ -13,7 +13,7 @@ function AddFeedback() {
   //ASYNC function
   const submitFeedback = async () => {
     try {
-      const response = await fetch("http://localhost:3000/add-one-suggestion", {
+      const response = await fetch("/api/add-one-suggestion", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

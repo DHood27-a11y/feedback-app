@@ -7,7 +7,6 @@ Boilerplate Code to Set Up Server
 //importing Node Modules
 import express from "express";
 import pg from "pg"; //pg stands for PostgreSQL, which we need to connect to the database
-import config from "./config.js"; //importing connection string to database hostedn on Neon
 
 // new pg.Pool() is connecting to our PostgreSQL database, or db for short
 const db = new pg.Pool({
