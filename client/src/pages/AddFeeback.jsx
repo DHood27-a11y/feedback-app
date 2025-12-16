@@ -3,16 +3,18 @@ import { useNavigate } from "react-router-dom";
 import newFeedbackIcon from "../assets/icons/icon-new-feedback.svg";
 
 function AddFeedback() {
+  //used to help user navigate between pages
   const navigate = useNavigate();
 
   //UseState
-  const [title, setTitle] = useState("");
-  const [category, setCategory] = useState("Feature");
-  const [description, setDescription] = useState("");
+  const [title, setTitle] = useState(""); //stores what user types into title input
+  const [category, setCategory] = useState("Feature"); //stores the selected category (default is Feature)
+  const [description, setDescription] = useState(""); //stores the feedback description input
 
-  //ASYNC function
+  //ASYNC function that will send feedback data to backend
   const submitFeedback = async () => {
     try {
+      //Make a POST request to save the new suggestion
       const response = await fetch("/api/add-one-suggestion", {
         method: "POST",
         headers: {
@@ -25,19 +27,22 @@ function AddFeedback() {
         }),
       });
 
-      const data = await response.text();
+      const data = await response.text(); //reads the response from the server
       console.log("Feedback submitted successfully", data);
+
+      //if error occurs, log it
     } catch (error) {
       console.error("Could not submit feedback", error);
     }
   };
 
-  //Handle submit
+  //Handle submit: will run once the form is submitted
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Data:", { title, category, description });
+    e.preventDefault(); //stops the page from refreshing
 
-    submitFeedback();
+    console.log("Form Data:", { title, category, description }); //log form data for debugging
+
+    submitFeedback(); //sends the feedback to the backend
 
     //this will be used to navigate back to home page
     navigate("/");

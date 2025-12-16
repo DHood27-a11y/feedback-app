@@ -5,38 +5,39 @@ import EmptyFeedback from "../components/EmptyFeedback";
 import IconSuggestion from "../assets/suggestions/icon-suggestions.svg";
 
 function Home() {
-  //created variable for each category so they can be filtered properly
-  const categories = ["All", "UI", "UX", "Enhancement", "Bug", "Feature"];
+  const categories = ["All", "UI", "UX", "Enhancement", "Bug", "Feature"]; //created variable for each category so they can be filtered properly
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); //allows user to navigate to different page
 
-  //Use state
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [suggestions, setSuggestions] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [selectedCategory, setSelectedCategory] = useState("All"); //will keep track of which category is currently selected
+  const [suggestions, setSuggestions] = useState([]); //stores the suggestions gotten from backend
+  const [isLoading, setIsLoading] = useState(true); //will produce loading message while backend talks to frontend
 
-  //ASYNC function
+  //ASYNC function that will get suggestions from the backend
   const getSuggestions = async () => {
     try {
-      setIsLoading(true);
+      setIsLoading(true); //this will turn on loading prior to fetching
 
       const url =
         selectedCategory === "All"
           ? "/api/get-all-suggestions"
-          : `/api/get-all-suggestions-by-category/${selectedCategory}`;
+          : `/api/get-all-suggestions-by-category/${selectedCategory}`; //If "all" is selected, get everything; otherwise get only suggestions for that category
 
-      const response = await fetch(url);
+      const response = await fetch(url); //makes the request
       const data = await response.json();
       console.log("Suggestions fetched:", data);
+      //saves the results into state
       setSuggestions(data);
       setIsLoading(false);
+      //this will catch error and log it
     } catch (error) {
       console.error("Error fetching suggestions", error);
+      //turn off loading no matter what occurs
       setIsLoading(false);
     }
   };
 
-  //useEffect
+  //useEffect will run getSuggestions every time the category changes
   useEffect(() => {
     getSuggestions();
   }, [selectedCategory]);
