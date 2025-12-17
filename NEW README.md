@@ -18,12 +18,24 @@ Check out the app: [HERE](https://ac-feedback-app.netlify.app/)
 
 
 
-
-<img width="1436" height="530" alt="Screenshot 2025-12-17 at 5 49 07 PM" src="https://github.com/user-attachments/assets/8bae7fea-b1cd-4bc2-9bfd-e6158c50e93e" />
-
+<img width="1377" height="734" alt="Screenshot 2025-12-17 at 6 37 40 PM" src="https://github.com/user-attachments/assets/ac95b81d-d9f6-40e1-8a46-d4ca479587e6" />
 
 
 
+
+
+
+
+
+<img width="601" height="694" alt="Screenshot 2025-12-17 at 6 35 04 PM" src="https://github.com/user-attachments/assets/e09efca4-17a5-48b1-8d97-c70f26c96e3c" />
+
+
+
+
+
+
+
+<img width="742" height="775" alt="Screenshot 2025-12-17 at 6 36 13 PM" src="https://github.com/user-attachments/assets/a3281e95-b279-4f35-8614-30c70f50f970" />
 
 
 
@@ -110,8 +122,11 @@ VALUES ('Add Voting Feature','Allows users to upvote/downvote suggestions','Feat
  7. I learned how to connect data using SQL, then connecting Schema table to Neon, and then ultimately deploying to Render. 
 8. Most importantly I learned that I don't need to be afraid to fail because without failure I wouldn't be able to even comprehend what success looks like
 
-**What I'm proud of:**  I am proud of the research I was able to do regarding CSS styling that taught me better ways to structure certain pages.
-**What challenged me:** Overthinking. Overthinking. Overthinking.
+**What I'm proud of:**   I am proud of the research I was able to do regarding CSS styling that taught me better ways to structure certain pages.
+
+
+**What challenged me:** 
+Overthinking. Overthinking. Overthinking.
 
 **Future ideas for how I'd continue building this project:** 
 1. I would create a confetti feature when users add a suggestion.
