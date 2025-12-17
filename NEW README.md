@@ -9,13 +9,17 @@ about how the "product" can be improved. The apps purpose would be to help a com
 
 ## 🚀 Live Site
 
-Check out the app: https://ac-feedback-app.netlify.app/
+Check out the app: [HERE](https://ac-feedback-app.netlify.app/)
+
+
 
 ## 🖼️ Screenshots
 
-! [screenshot of desktop layout] (client/src/assets/Screenshot 2025-12-17 at 5.49.07 PM.png)
 
 
+
+
+<img width="1436" height="530" alt="Screenshot 2025-12-17 at 5 49 07 PM" src="https://github.com/user-attachments/assets/8bae7fea-b1cd-4bc2-9bfd-e6158c50e93e" />
 
 
 
@@ -107,7 +111,7 @@ VALUES ('Add Voting Feature','Allows users to upvote/downvote suggestions','Feat
 8. Most importantly I learned that I don't need to be afraid to fail because without failure I wouldn't be able to even comprehend what success looks like
 
 **What I'm proud of:**  I am proud of the research I was able to do regarding CSS styling that taught me better ways to structure certain pages.
-**What challenged me:** _Overthinking. Overthinking. Overthinking.
+**What challenged me:** Overthinking. Overthinking. Overthinking.
 
 **Future ideas for how I'd continue building this project:** 
 1. I would create a confetti feature when users add a suggestion.
