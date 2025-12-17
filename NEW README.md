@@ -13,7 +13,7 @@ Check out the app: https://ac-feedback-app.netlify.app/
 
 ## 🖼️ Screenshots
 
-! [screenshot of desktop layout] (/assets/Screenshot 2025-12-17 at 5.49.07 PM.png)
+! [screenshot of desktop layout] (client/src/assets/Screenshot 2025-12-17 at 5.49.07 PM.png)
 
 
 
